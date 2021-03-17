@@ -1,0 +1,44 @@
+<mat-dialog-content class="mat-typography">
+  <mat-horizontal-stepper labelPosition="top">
+    <mat-step state="phone" completed="false">
+      <div class="centered">
+        <h2 mat-dialog-title>Welcome to MEARIS !!</h2>
+        <p>
+          Using this system you can submit coding and payment applications and
+          requests for New Technologies.
+        </p>
+        <br />
+        <p>
+          <b>Before you can get started, you need to create an Organization.</b>
+        </p>
+        <button mat-raised-button matStepperNext color="primary">Next</button>
+      </div>
+    </mat-step>
+    <mat-step state="chat" completed="false">
+      <h2 mat-dialog-title>What is an Organization?</h2>
+      <p>Socialize with each other.</p>
+      <div>
+        <button mat-raised-button matStepperPrevious>Back</button>
+        <button mat-raised-button matStepperNext>Next</button>
+      </div>
+    </mat-step>
+    <mat-step state="done" completed="false">
+      <h2 mat-dialog-title>How should I name my Organization?</h2>
+      <p>You're welcome.</p>
+      <button mat-raised-button [mat-dialog-close]="true" cdkFocusInitial>
+        Close
+      </button>
+    </mat-step>
+
+    <!-- Icon overrides. -->
+    <ng-template matStepperIcon="phone">
+      <mat-icon>home</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="chat">
+      <mat-icon>label</mat-icon>
+    </ng-template>
+    <ng-template matStepperIcon="done">
+      <mat-icon>info</mat-icon>
+    </ng-template>
+  </mat-horizontal-stepper>
+</mat-dialog-content>
